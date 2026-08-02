@@ -17,9 +17,13 @@ const captions = [
   'Días espontáneos que merecen quedarse para siempre.',
   'Sol, playa y una felicidad imposible de esconder.',
   'Un paso más en una historia que recién comienza.',
+  'Dos sonrisas y un momento que ahora es parte de nosotros.',
+  'Una tarde juntos, siendo exactamente quienes somos.',
+  'Nuestra complicidad en una de mis fotos favoritas.',
+  'Un beso, una hora guardada y un recuerdo solo nuestro.',
 ]
 
-const portraitIds = new Set([1, 3, 4, 6, 7, 11, 15])
+const portraitIds = new Set([1, 3, 4, 6, 7, 11, 15, 17, 18, 19, 20])
 
 export const gallery = captions.map((caption, index) => ({
   id: index + 1,
