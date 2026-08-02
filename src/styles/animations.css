@@ -1,0 +1,17 @@
+.animated-content { opacity: 0; transform: translateY(35px); transition: opacity .8s var(--reveal-delay) cubic-bezier(.2,.7,.2,1), transform .8s var(--reveal-delay) cubic-bezier(.2,.7,.2,1); }
+.animated-content.is-visible { opacity: 1; transform: translateY(0); }
+.split-word { display: inline-block; white-space: nowrap; }.split-letter { display: inline-block; opacity: 0; transform: translateY(45px) rotate(3deg); animation: letterIn .75s var(--letter-delay) cubic-bezier(.2,.8,.2,1) forwards; }.split-space { display: inline-block; width: .18em; }
+@keyframes letterIn { to { opacity: 1; transform: translateY(0) rotate(0); } }
+@keyframes heroZoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+@keyframes glow { 50% { opacity: .3; transform: scale(.7); } }
+@keyframes scrollLine { 0%,100% { transform: scaleY(.35); transform-origin: top; } 50% { transform: scaleY(1); } }
+@keyframes musicBar { to { height: 20%; } }
+@keyframes shimmer { to { background-position: -200% 0; } }
+@keyframes cardRise { from { opacity: 0; transform: translateY(45px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes heartFall { 0% { opacity: 0; transform: translateY(-40px) rotate(0); } 12% { opacity: .9; } 100% { opacity: 0; transform: translateY(110vh) rotate(520deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .animated-content, .split-letter { opacity: 1; transform: none; }
+  .ambient-lights { display: none; }
+}
