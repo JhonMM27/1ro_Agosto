@@ -5,7 +5,7 @@ import AnimatedContent from '../common/AnimatedContent'
 export default function FinalSection() {
   const time = useRelationshipCounter(coupleConfig.relationshipStartDate)
   return <footer className="final-section">
-    <img src="/images/final/especial.jpeg" alt="Un recuerdo especial en nuestro camino" loading="lazy" />
+    <img src={`${import.meta.env.BASE_URL}images/final/especial.jpeg`} alt="Un recuerdo especial en nuestro camino" loading="lazy" />
     <div className="final-overlay" />
     <AnimatedContent className="final-content shell">
       <span className="eyebrow">Y lo mejor de todo</span>

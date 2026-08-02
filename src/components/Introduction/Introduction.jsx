@@ -12,7 +12,7 @@ export default function Introduction() {
       </AnimatedContent>
       <AnimatedContent className="polaroid-wrap" delay={150}>
         <figure className="polaroid">
-          <img src="/images/gallery/recuerdo-01.jpeg" alt="Retrato especial de Rosa con su uniforme de Enfermería" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}images/gallery/recuerdo-01.jpeg`} alt="Retrato especial de Rosa con su uniforme de Enfermería" loading="lazy" />
           <figcaption>Rosa, la dueña de mis días bonitos</figcaption>
         </figure>
         <span className="tape" aria-hidden="true" />

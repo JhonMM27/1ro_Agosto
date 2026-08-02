@@ -6,7 +6,7 @@ import SplitText from '../common/SplitText'
 export default function Hero() {
   const scrollToStory = () => document.querySelector('#introduccion')?.scrollIntoView({ behavior: 'smooth' })
   return <header className="hero-section" id="inicio">
-    <img className="hero-image" src="/images/hero/principal.jpeg" alt="Ella sonriendo en primer plano durante un día especial" fetchPriority="high" />
+    <img className="hero-image" src={`${import.meta.env.BASE_URL}images/hero/principal.jpeg`} alt="Ella sonriendo en primer plano durante un día especial" fetchPriority="high" />
     <div className="hero-overlay" />
     <div className="ambient-lights" aria-hidden="true"><i /><i /><i /></div>
     <MusicPlayer src={coupleConfig.songPath} />

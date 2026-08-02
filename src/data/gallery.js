@@ -1,3 +1,5 @@
+const asset = (path) => `${import.meta.env.BASE_URL}${path}`
+
 const captions = [
   'La sonrisa que quiero seguir viendo cada día.',
   'Un día de playa y de risas que se quedó con nosotros.',
@@ -21,7 +23,7 @@ const portraitIds = new Set([1, 3, 4, 6, 7, 11, 15])
 
 export const gallery = captions.map((caption, index) => ({
   id: index + 1,
-  src: `/images/gallery/recuerdo-${String(index + 1).padStart(2, '0')}.jpeg`,
+  src: asset(`images/gallery/recuerdo-${String(index + 1).padStart(2, '0')}.jpeg`),
   alt: `Recuerdo especial ${index + 1} de nuestra historia`,
   caption,
   orientation: portraitIds.has(index + 1) ? 'portrait' : 'landscape',
@@ -29,6 +31,6 @@ export const gallery = captions.map((caption, index) => ({
 
 export const videos = Array.from({ length: 5 }, (_, index) => ({
   id: index + 1,
-  src: `/videos/recuerdo-${String(index + 1).padStart(2, '0')}.mp4`,
+  src: asset(`videos/recuerdo-${String(index + 1).padStart(2, '0')}.mp4`),
   caption: ['Un instante para volver a vivir', 'Risas en movimiento', 'Un pedacito de aquel día', 'Momentos que no caben en una foto', 'Un recuerdo breve y bonito'][index],
 }))
